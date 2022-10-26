@@ -101,5 +101,10 @@ public void save() {
         }
         return true;
     }
+    public void depleteLevels(){
+        playLevel--;
+        foodLevel--;
+        sleepLevel--;
+    }
 
 }
