@@ -73,4 +73,33 @@ public class MonsterTest {
         Monster savedMonster = Monster.find(testMonster.getId());
         assertEquals(savedMonster.getPersonId(), testPerson.getId());
     }
+    @Test
+    public void monster_instantiatesWithHalfFullPlayLevel(){
+        Monster testMonster = new Monster("Bubbles", 1);
+        assertEquals(testMonster.getPlayLevel(), (Monster.MAX_PLAY_LEVEL / 2));
+    }
+
+    @Test
+    public void monster_intatiatesWithHafFullSleepLevel() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        assertEquals(testMonster.getSleepLevel(), (Monster.MAX_SLEEP_LEVEL / 2));
+    }
+
+    @Test
+    public void monster_intatiatesWithHalfFullFoodLevel() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        assertEquals(testMonster.getFoodLevel(),(Monster.MAX_FOOD_LEVEL/2));
+    }
+
+    @Test
+    public void monster_intatiatesWithHalfFullAllLevels() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        assertEquals(testMonster.getAllLevels(),(Monster.MIN_ALL_LEVELS/0));
+    }
+
+    @Test
+    public void isAlive_confirmsIfMonsterIsAliveIfAllLevelsAboveMinimum_True() {
+        Monster testMonster = new Monster("Bubbles",1);
+        assertEquals(testMonster.isAlive(),true);
+    }
 }
