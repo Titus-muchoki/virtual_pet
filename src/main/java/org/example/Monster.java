@@ -13,7 +13,7 @@ public class Monster {
     private int foodLevel;
     private int sleepLevel;
     private int playLevel;
-    private int allLevels;
+//    private int allLevels;
 
 
 
@@ -27,7 +27,7 @@ public class Monster {
         this.playLevel = MAX_PLAY_LEVEL/2;
         this.sleepLevel = MAX_SLEEP_LEVEL/2;
         this.foodLevel = MAX_FOOD_LEVEL/2;
-        this.allLevels = MIN_ALL_LEVELS /0;
+//        this.allLevels = MIN_ALL_LEVELS /0;
     }
 
     public String getName() {
@@ -50,9 +50,9 @@ public class Monster {
         return foodLevel;
     }
 
-    public int getAllLevels() {
-        return allLevels;
-    }
+//    public int getAllLevels() {
+//        return allLevels;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -112,7 +112,7 @@ public void save() {
     public void sleep(){
         sleepLevel++;
     }
-    public void food(){
+    public void feed(){
         foodLevel++;
     }
 

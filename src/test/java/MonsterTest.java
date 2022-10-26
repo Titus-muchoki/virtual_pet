@@ -91,11 +91,11 @@ public class MonsterTest {
         assertEquals(testMonster.getFoodLevel(),(Monster.MAX_FOOD_LEVEL/2));
     }
 
-    @Test
-    public void monster_intatiatesWithHalfFullAllLevels() {
-        Monster testMonster = new Monster("Bubbles", 1);
-        assertEquals(testMonster.getAllLevels(),(Monster.MIN_ALL_LEVELS/0));
-    }
+//    @Test
+//    public void monster_intatiatesWithHalfFullAllLevels() {
+//        Monster testMonster = new Monster("Bubbles", 1);
+//        assertEquals(testMonster.getAllLevels(),(Monster.MIN_ALL_LEVELS/0));
+//    }
 
     @Test
     public void isAlive_confirmsIfMonsterIsAliveIfAllLevelsAboveMinimum_True() {
@@ -137,7 +137,15 @@ public class MonsterTest {
     @Test
     public void food_increaseFoodLevel() {
         Monster testMonster = new Monster("Bubbles", 1);
-        testMonster.food();
+        testMonster.feed();
         assertTrue(testMonster.getFoodLevel() > (Monster.MAX_FOOD_LEVEL/2));
+    }
+    @Test
+    public void monster_foodLevelCannotGoBeyondMaxValue(){
+        Monster testMonster = new Monster("Bubbles", 1);
+        for(int i = Monster.MIN_ALL_LEVELS; i <= (Monster.MAX_FOOD_LEVEL + 2); i++){
+            testMonster.feed();
+        }
+        assertTrue(testMonster.getFoodLevel() <= Monster.MAX_FOOD_LEVEL);
     }
 }
