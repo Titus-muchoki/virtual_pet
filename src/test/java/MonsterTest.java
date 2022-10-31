@@ -3,6 +3,9 @@ import org.example.Person;
 import org.junit.Rule;
 import org.junit.Test;
 
+import java.security.Timestamp;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -196,5 +199,14 @@ public class MonsterTest {
         for (int i = Monster.MIN_ALL_LEVELS;i<=(Monster.MAX_SLEEP_LEVEL);i++){
             testMonster.sleep();
         }
+    }
+
+    @Test
+    public void save_recordsTimesOfCreationInDatabase() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+        Timestamp rightNow = new Timestamp(new Date().getTime());
+        assertEquals(rightNow, savedMonsterBirthday);
     }
 }
