@@ -2,10 +2,15 @@ package org.example;
 
 import org.sql2o.Connection;
 
+import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
 
 public class Monster {
+    private Timestamp birthday;
+    private Timestamp lastSlept;
+    private Timestamp lastAte;
+    private Timestamp lastPlayed;
     private String name;
     private int personId;
 
