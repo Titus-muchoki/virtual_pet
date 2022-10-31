@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Gradle Test Executor 5" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-10-26T19:46:39" hostname="kajela-HP-EliteBook-840-G3" time="0.035">
+<testsuite name="Gradle Test Executor 1" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-10-28T08:49:47" hostname="kajela-HP-EliteBook-840-G3" time="0.048">
   <properties/>
-  <testcase name="failed to execute tests" classname="Gradle Test Executor 5" time="0.035">
-    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 5." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 5.
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 1" time="0.048">
+    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 1." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 1.
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
 	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
