@@ -227,5 +227,23 @@ public void save_recordsTimeOfCreationInDatabase() {
         assertEquals(DateFormat.getDateTimeInstance().format(rightNow), DateFormat.getDateTimeInstance().format(savedMonsterLastSlept));
     }
 
+    @Test
+    public void feed_recordsTimeLastFeedInDatabase() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        testMonster.feed();
+        Timestamp savedMonsterLastFeed = Monster.find(testMonster.getId()).getLastFeed();
+        Timestamp rightNow = new Timestamp(new Date().getTime());
+        assertEquals(DateFormat.getDateTimeInstance().format(rightNow), DateFormat.getDateTimeInstance().format(savedMonsterLastFeed));
+    }
 
+    @Test
+    public void played_recordsTimeLastPlayedInDatabase() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        testMonster.play();
+        Timestamp savedMonsterLastPlayed = Monster.find(testMonster.getId()).getLastPlayed();
+        Timestamp rightNow = new Timestamp(new Date().getTime());
+        assertEquals(DateFormat.getDateTimeInstance().format(rightNow),DateFormat.getDateTimeInstance().format(savedMonsterLastPlayed));
+    }
 }

@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Monster {
     private Timestamp birthday;
     private Timestamp lastSlept;
-    private Timestamp lastAte;
+    private Timestamp lastFeed;
     private Timestamp lastPlayed;
     private String name;
     private int personId;
@@ -116,6 +116,13 @@ public void save() {
         if (playLevel >= MAX_PLAY_LEVEL){
             throw  new UnsupportedOperationException("you cannot play with monster any more");
         }
+        try (Connection conn = DB.sql2o.open()){
+            String sql = " UPDATE monster SET lastPlayed = now() WHERE id = :id";
+            conn.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
+
+        }
         playLevel++;
     }
     public void sleep(){
@@ -135,9 +142,29 @@ public void save() {
         if (foodLevel >= MAX_FOOD_LEVEL){
             throw new UnsupportedOperationException("you cannot feed your monster anymore!");
         }
+        try(Connection conn = DB.sql2o.open()) {
+            String sql = "UPDATE monster SET lastFeed = now() WHERE id = :id";
+            conn.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
+
+        }
         foodLevel++;
     }
     public Timestamp getBirthday(){
         return birthday;
     }
+
+    public Timestamp getLastSlept() {
+        return lastSlept;
+    }
+
+    public Timestamp getLastPlayed() {
+        return lastPlayed;
+    }
+
+    public Timestamp getLastFeed() {
+        return lastFeed;
+    }
 }
+
