@@ -4,6 +4,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import java.security.Timestamp;
+import java.text.DateFormat;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -200,13 +201,31 @@ public class MonsterTest {
             testMonster.sleep();
         }
     }
-
+//    @Test
+//    public void save_recordsTimesOfCreationInDatabase() {
+//        Monster testMonster = new Monster("Bubbles", 1);
+//        testMonster.save();
+//        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+//        Timestamp rightNow = new Timestamp(new Date().getTime());
+//        assertEquals(rightNow.getDay(), savedMonsterBirthday.getDay());
+//    }
+@Test
+public void save_recordsTimeOfCreationInDatabase() {
+    Monster testMonster = new Monster("Bubbles", 1);
+    testMonster.save();
+    Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+    Timestamp rightNow = new Timestamp(new Date().getTime());
+    assertEquals(rightNow.getTimestamp(), savedMonsterBirthday.getTimestamp());
+}
     @Test
-    public void save_recordsTimesOfCreationInDatabase() {
+    public void sleep_recordsTimeLastSleptInDatabase() {
         Monster testMonster = new Monster("Bubbles", 1);
         testMonster.save();
-        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+        testMonster.sleep();
+        Timestamp savedMonsterLastSlept = Monster.find(testMonster.getId()).getLastSlept();
         Timestamp rightNow = new Timestamp(new Date().getTime());
-        assertEquals(rightNow, savedMonsterBirthday);
+        assertEquals(DateFormat.getDateTimeInstance().format(rightNow), DateFormat.getDateTimeInstance().format(savedMonsterLastSlept));
     }
+
+
 }

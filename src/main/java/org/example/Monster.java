@@ -72,6 +72,7 @@ public class Monster {
 //    }
 public void save() {
     try(Connection con = DB.sql2o.open()) {
+//        String sql = "INSERT INTO monsters (name, personId, birthday) VALUES (:name, :personId, now())";
         String sql = "INSERT INTO monsters (name, personId, birthday) VALUES (:name, :personId, now())";
         this.id = (int) con.createQuery(sql, true)
                 .addParameter("name", this.name)
@@ -120,6 +121,13 @@ public void save() {
     public void sleep(){
         if (sleepLevel >= MAX_SLEEP_LEVEL){
             throw new UnsupportedOperationException("you cannot sleep your monster anymore");
+        }
+        try (Connection conn = DB.sql2o.open()){
+    String sql = "UPDATE monster SET lastSlept = now() WHERE id = :id";
+    conn.createQuery(sql)
+            .addParameter("id", id)
+            .executeUpdate();
+
         }
         sleepLevel++;
     }
