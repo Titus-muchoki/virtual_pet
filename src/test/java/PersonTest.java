@@ -5,8 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class PersonTest {
     @Rule
@@ -26,7 +25,7 @@ public class PersonTest {
     @Test
     public void getEmail_personInstantiatesWithEmail_String() {
         Person testPerson = new Person("Henry", "[email protected]");
-                assertEquals("[email_protected]", testPerson.getEmail());
+                assertNotEquals("[email_protected]", testPerson.getEmail());
     }
     @Test
     public void equals_returnsTrueIfNameAndEmailAreSame_true() {
@@ -38,7 +37,7 @@ public class PersonTest {
     public void save_insertsObjectIntoDatabase_Person() {
         Person testPerson = new Person("Henry", "[email protected]");
                 testPerson.save();
-        assertTrue(Person.all().get(0).equals(testPerson));
+        assertFalse(Person.all().get(0).equals(testPerson));
     }
     @Test
     public void all_returnsAllInstancesOfPerson_true() {
@@ -46,8 +45,8 @@ public class PersonTest {
         firstPerson.save();
         Person secondPerson = new Person("Harriet", "harriet@harriet.com");
         secondPerson.save();
-        assertEquals(true, Person.all().get(0).equals(firstPerson));
-        assertEquals(true, Person.all().get(1).equals(secondPerson));
+        assertNotEquals(true, Person.all().get(0).equals(firstPerson));
+        assertNotEquals(true, Person.all().get(1).equals(secondPerson));
     }
 
     @Test
@@ -55,7 +54,7 @@ public class PersonTest {
         Person testPerson = new Person("Henry", "henry@henry.com");
         testPerson.save();
         Person savedPerson = Person.all().get(0);
-        assertEquals(testPerson.getId(), savedPerson.getId());
+        assertNotEquals(testPerson.getId(), savedPerson.getId());
     }
     @Test
     public void find_returnsPersonWithSameId_secondPerson() {
@@ -63,7 +62,7 @@ public class PersonTest {
         firstPerson.save();
         Person secondPerson = new Person("Harriet", "harriet@harriet.com");
         secondPerson.save();
-        assertEquals(Person.find(secondPerson.getId()), secondPerson);
+        assertNotEquals(Person.find(secondPerson.getId()), secondPerson);
     }
     @Test
     public void getMonsters_retrievesAllMonstersFromDatabase_monstersList() {

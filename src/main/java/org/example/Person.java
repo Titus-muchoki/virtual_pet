@@ -17,7 +17,8 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Person person)) return false;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
         return id == person.id && Objects.equals(name, person.name) && Objects.equals(email, person.email);
     }
 

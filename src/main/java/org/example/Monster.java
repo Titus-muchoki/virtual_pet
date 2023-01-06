@@ -20,7 +20,8 @@ public class Monster {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Monster monster)) return false;
+        if (!(o instanceof Monster)) return false;
+        Monster monster = (Monster) o;
         return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
     }
 
