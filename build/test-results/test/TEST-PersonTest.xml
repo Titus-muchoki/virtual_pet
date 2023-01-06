@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PersonTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-01-06T09:37:55" hostname="kajela-HP-EliteBook-840-G3" time="0.473">
+<testsuite name="PersonTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-01-06T17:24:56" hostname="kajela-HP-EliteBook-840-G3" time="0.623">
   <properties/>
-  <testcase name="find_returnsPersonWithSameId_secondPerson" classname="PersonTest" time="0.195"/>
-  <testcase name="save_insertsObjectIntoDatabase_Person" classname="PersonTest" time="0.038"/>
-  <testcase name="person_instantiatesCorrectly_true" classname="PersonTest" time="0.007"/>
-  <testcase name="getName_personInstantiatesWithName_Henry" classname="PersonTest" time="0.008"/>
-  <testcase name="getMonsters_retrievesAllMonstersFromDatabase_monstersList" classname="PersonTest" time="0.057"/>
-  <testcase name="equals_returnsTrueIfNameAndEmailAreSame_true" classname="PersonTest" time="0.022"/>
-  <testcase name="all_returnsAllInstancesOfPerson_true" classname="PersonTest" time="0.095"/>
-  <testcase name="save_assignsIdToObject" classname="PersonTest" time="0.028"/>
-  <testcase name="getEmail_personInstantiatesWithEmail_String" classname="PersonTest" time="0.008"/>
+  <testcase name="find_returnsPersonWithSameId_secondPerson" classname="PersonTest" time="0.302"/>
+  <testcase name="save_insertsObjectIntoDatabase_Person" classname="PersonTest" time="0.059"/>
+  <testcase name="person_instantiatesCorrectly_true" classname="PersonTest" time="0.015"/>
+  <testcase name="getName_personInstantiatesWithName_Henry" classname="PersonTest" time="0.013"/>
+  <testcase name="getMonsters_retrievesAllMonstersFromDatabase_monstersList" classname="PersonTest" time="0.086"/>
+  <testcase name="equals_returnsTrueIfNameAndEmailAreSame_true" classname="PersonTest" time="0.011"/>
+  <testcase name="all_returnsAllInstancesOfPerson_true" classname="PersonTest" time="0.071"/>
+  <testcase name="save_assignsIdToObject" classname="PersonTest" time="0.039"/>
+  <testcase name="getEmail_personInstantiatesWithEmail_String" classname="PersonTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
