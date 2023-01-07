@@ -81,8 +81,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MonsterTest.monster_foodLevelCannotGoBeyondMaxValue">
-    <configuration name="MonsterTest.feed_increasesMonsterFoodLevel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MonsterTest">
+    <configuration name="MonsterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -95,30 +95,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MonsterTest.feed_increasesMonsterFoodLevel&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MonsterTest.isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;MonsterTest.isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false&quot;" />
+            <option value="&quot;MonsterTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -151,7 +128,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MonsterTest.play_increasesMonsterPlayLevel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MonsterTest.monster_playLevelCannotGoBeyondMaxValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -164,7 +141,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MonsterTest.play_increasesMonsterPlayLevel&quot;" />
+            <option value="&quot;MonsterTest.monster_playLevelCannotGoBeyondMaxValue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -174,7 +151,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MonsterTest.sleep_increasesMonsterSleepLevel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MonsterTest.play_throwsExceptionIfPlayLevelIsAtMaxValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +164,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MonsterTest.sleep_increasesMonsterSleepLevel&quot;" />
+            <option value="&quot;MonsterTest.play_throwsExceptionIfPlayLevelIsAtMaxValue&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MonsterTest.sleep_throwsExceptionIfSleepLevelIsAtMaxValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MonsterTest.sleep_throwsExceptionIfSleepLevelIsAtMaxValue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MonsterTest" />
+        <item itemvalue="Gradle.MonsterTest.sleep_throwsExceptionIfSleepLevelIsAtMaxValue" />
+        <item itemvalue="Gradle.MonsterTest.monster_playLevelCannotGoBeyondMaxValue" />
+        <item itemvalue="Gradle.MonsterTest.play_throwsExceptionIfPlayLevelIsAtMaxValue" />
         <item itemvalue="Gradle.MonsterTest.monster_foodLevelCannotGoBeyondMaxValue" />
-        <item itemvalue="Gradle.MonsterTest.feed_increasesMonsterFoodLevel" />
-        <item itemvalue="Gradle.MonsterTest.sleep_increasesMonsterSleepLevel" />
-        <item itemvalue="Gradle.MonsterTest.play_increasesMonsterPlayLevel" />
-        <item itemvalue="Gradle.MonsterTest.isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +249,20 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/MonsterTest.java</url>
+          <line>143</line>
+          <properties class="MonsterTest" method="play_throwsExceptionIfPlayLevelIsAtMaxValue">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Monster.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

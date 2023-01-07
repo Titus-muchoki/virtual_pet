@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">19</div>
+<div class="counter">23</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.648s</div>
+<div class="counter">0.517s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,71 +76,81 @@
 </thead>
 <tr>
 <td class="success">Monster_instantiatesWithName_String</td>
-<td class="success">0.009s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Monster_instantiatesWithPersonId_int</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">all_returnsAllInstancesOfMonster_true</td>
-<td class="success">0.058s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">depleteLevels_reducesAllLevels</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">equals_returnsTrueIfNameAndPersonIdAreSame_true</td>
-<td class="success">0.011s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">feed_increasesMonsterFoodLevel</td>
-<td class="success">0.024s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">find_returnsMonsterWithSameId_secondMonster</td>
-<td class="success">0.045s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false</td>
-<td class="success">0.013s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">monster_foodLevelCannotGoBeyondMaxValue</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">monster_instantiatesCorrectly_true</td>
 <td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">all_returnsAllInstancesOfMonster_true</td>
+<td class="success">0.046s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">depleteLevels_reducesAllLevels</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">equals_returnsTrueIfNameAndPersonIdAreSame_true</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">feed_increasesMonsterFoodLevel</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">feed_throwsExceptionIfFoodLevelIsAtMaxValue</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">find_returnsMonsterWithSameId_secondMonster</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">monster_foodLevelCannotGoBeyondMaxValue</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">monster_instantiatesCorrectly_true</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">monster_instantiatesWithHalfFullFoodLevel</td>
-<td class="success">0.011s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">monster_instantiatesWithHalfFullPlayLevel</td>
-<td class="success">0.035s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">monster_instantiatesWithHalfFullSleepLevel</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">monster_playLevelCannotGoBeyondMaxValue</td>
 <td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
@@ -150,23 +160,33 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">play_throwsExceptionIfPlayLevelIsAtMaxValue</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">save_assignsIdToMonster</td>
-<td class="success">0.029s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">save_returnsTrueIfDescriptionsAretheSame</td>
-<td class="success">0.093s</td>
+<td class="success">0.031s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">save_savesPersonIdIntoDB_true</td>
-<td class="success">0.100s</td>
+<td class="success">0.078s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sleep_increasesMonsterSleepLevel</td>
-<td class="success">0.148s</td>
+<td class="success">0.124s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sleep_throwsExceptionIfSleepLevelIsAtMaxValue</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -179,7 +199,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at Jan 7, 2023, 6:28:49 AM</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at Jan 7, 2023, 12:22:15 PM</p>
 </div>
 </div>
 </body>
