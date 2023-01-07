@@ -68,8 +68,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MonsterTest.monster_instantiatesWithHalfFullFoodLevel">
-    <configuration name="MonsterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MonsterTest.isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true">
+    <configuration name="MonsterTest.isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -82,7 +82,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MonsterTest&quot;" />
+            <option value="&quot;MonsterTest.isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MonsterTest.isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true" />
         <item itemvalue="Gradle.MonsterTest.monster_instantiatesWithHalfFullFoodLevel" />
         <item itemvalue="Gradle.MonsterTest.monster_instantiatesWithHalfFullSleepLevel" />
         <item itemvalue="Gradle.MonsterTest.monster_instantiatesWithHalfFullPlayLevel" />
         <item itemvalue="Gradle.PersonTest" />
-        <item itemvalue="Gradle.MonsterTest" />
       </list>
     </recent_temporary>
   </component>

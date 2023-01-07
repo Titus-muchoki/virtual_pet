@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MonsterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-07T11:06:02" hostname="kajela-HP-EliteBook-840-G3" time="0.141">
+<testsuite name="MonsterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-07T11:09:57" hostname="kajela-HP-EliteBook-840-G3" time="0.152">
   <properties/>
-  <testcase name="isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true" classname="MonsterTest" time="0.141"/>
+  <testcase name="depleteLevels_reducesAllLevels" classname="MonsterTest" time="0.152"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
