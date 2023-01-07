@@ -12,9 +12,21 @@ public class Monster {
         private int personId;
 
         private int id;
+    private int foodLevel;
+    private int sleepLevel;
+    private int playLevel;
+    public static final int MAX_FOOD_LEVEL = 3;
+    public static final int MAX_SLEEP_LEVEL = 8;
+    public static final int MAX_PLAY_LEVEL = 12;
+    public static final int MIN_ALL_LEVELS = 0;
+
     public Monster(String name, int personId) {
     this.name = name;
     this.personId = personId;
+    this.playLevel = MAX_PLAY_LEVEL / 2;
+        sleepLevel = MAX_SLEEP_LEVEL / 2;
+        foodLevel = MAX_FOOD_LEVEL / 2;
+
     }
 
     @Override
@@ -54,6 +66,30 @@ public class Monster {
         this.id = id;
     }
 
+    public int getPlayLevel() {
+        return playLevel;
+    }
+
+    public void setPlayLevel(int playLevel) {
+        this.playLevel = playLevel;
+    }
+
+    public int getSleepLevel() {
+        return sleepLevel;
+    }
+
+    public void setSleepLevel(int sleepLevel) {
+        this.sleepLevel = sleepLevel;
+    }
+
+    public int getFoodLevel() {
+        return foodLevel;
+    }
+
+    public void setFoodLevel(int foodLevel) {
+        this.foodLevel = foodLevel;
+    }
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO monsters (name, personid) VALUES (:name, :personId)";
@@ -78,6 +114,14 @@ public class Monster {
                     .executeAndFetchFirst(Monster.class);
             return monster;
         }
+    }
+    public boolean isAlive() {
+        if (foodLevel <= MIN_ALL_LEVELS ||
+                playLevel <= MIN_ALL_LEVELS ||
+                sleepLevel <= MIN_ALL_LEVELS) {
+            return false;
+        }
+        return true;
     }
 }
 
