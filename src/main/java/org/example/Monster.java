@@ -2,6 +2,8 @@ package org.example;
 
 import org.sql2o.Connection;
 
+import java.security.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,10 +17,17 @@ public class Monster {
     private int foodLevel;
     private int sleepLevel;
     private int playLevel;
+
+    private Timestamp birthday;
+    private Timestamp lastSlept;
+    private Timestamp lastAte;
+    private Timestamp lastPlayed;
+
     public static final int MAX_FOOD_LEVEL = 3;
     public static final int MAX_SLEEP_LEVEL = 8;
     public static final int MAX_PLAY_LEVEL = 12;
     public static final int MIN_ALL_LEVELS = 0;
+
 
     public Monster(String name, int personId) {
     this.name = name;
@@ -29,19 +38,28 @@ public class Monster {
 
     }
 
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Monster)) return false;
+//        Monster monster = (Monster) o;
+//        return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(name, personId, id);
+//    }
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Monster)) return false;
-        Monster monster = (Monster) o;
-        return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
+    public boolean equals(Object otherMonster){
+    if (!(otherMonster instanceof Monster)) {
+        return false;
+    } else {
+        Monster newMonster = (Monster) otherMonster;
+        return this.getName().equals(newMonster.getName()) &&
+                this.getPersonId() == newMonster.getPersonId();
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, personId, id);
-    }
-
+}
     public String getName() {
         return name;
     }
@@ -90,16 +108,24 @@ public class Monster {
         this.foodLevel = foodLevel;
     }
 
-    public void save() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO monsters (name, personid) VALUES (:name, :personId)";
-            this.id = (int) con.createQuery(sql, true)
-                    .addParameter("name", this.name)
-                    .addParameter("personId", this.personId)
-                    .executeUpdate()
-                    .getKey();
-        }
+    public Timestamp getBirthday() {
+        return birthday;
     }
+
+    public void setBirthday(Timestamp birthday) {
+        this.birthday = birthday;
+    }
+
+    public void save() {
+    try(Connection con = DB.sql2o.open()) {
+        String sql = "INSERT INTO monsters (name, personId, birthday) VALUES (:name, :personId, now())";
+        this.id = (int) con.createQuery(sql, true)
+                .addParameter("name", this.name)
+                .addParameter("personId", this.personId)
+                .executeUpdate()
+                .getKey();
+    }
+}
     public static List<Monster> all() {
         String sql = "SELECT * FROM monsters";
         try(Connection con = DB.sql2o.open()) {
