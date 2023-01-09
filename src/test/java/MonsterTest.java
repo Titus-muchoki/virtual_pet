@@ -178,23 +178,13 @@ public class MonsterTest {
         }
         assertTrue(testMonster.getSleepLevel() <= Monster.MAX_SLEEP_LEVEL);
     }
-//    @Test
-//    public void save_recordsTimeOfCreationInDatabase() {
-//        Monster testMonster = new Monster("Bubbles", 1);
-//        testMonster.save();
-//        Date savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday().getTimestamp();
-//        Date rightNow = new Date(new Date().getTime());
-//        assertEquals(rightNow, savedMonsterBirthday);
-//    }
     @Test
     public void save_recordsTimeOfCreationInDatabase() {
-    Monster testMonster = new Monster("Bubbles", 1);
-    testMonster.save();
-    Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
-    Timestamp rightNow = new Timestamp(new Date().getTime());
-//    assertEquals(rightNow, savedMonsterBirthday);
-        assertEquals(rightNow.getDay(), savedMonsterBirthday.getDay());
-
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+        Date rightNow = new Date(new Date().getTime());
+        assertEquals(rightNow, savedMonsterBirthday);
     }
    }
 

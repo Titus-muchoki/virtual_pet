@@ -38,28 +38,19 @@ public class Monster {
 
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Monster)) return false;
-//        Monster monster = (Monster) o;
-//        return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(name, personId, id);
-//    }
     @Override
-    public boolean equals(Object otherMonster){
-    if (!(otherMonster instanceof Monster)) {
-        return false;
-    } else {
-        Monster newMonster = (Monster) otherMonster;
-        return this.getName().equals(newMonster.getName()) &&
-                this.getPersonId() == newMonster.getPersonId();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Monster)) return false;
+        Monster monster = (Monster) o;
+        return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
     }
-}
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, personId, id);
+    }
+
     public String getName() {
         return name;
     }

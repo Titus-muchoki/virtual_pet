@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.160s</div>
+<div class="counter">0.161s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,18 +76,11 @@
 <a name="save_recordsTimeOfCreationInDatabase"></a>
 <h3 class="failures">save_recordsTimeOfCreationInDatabase</h3>
 <span class="code">
-<pre>org.sql2o.Sql2oException: Error in executeUpdate, ERROR: column &quot;birthday&quot; of relation &quot;monsters&quot; does not exist
-  Position: 39
+<pre>org.sql2o.Sql2oException: Error in executeUpdate, ERROR: relation &quot;persons&quot; does not exist
+  Position: 13
 	at app//org.sql2o.Query.executeUpdate(Query.java:659)
-	at app//org.example.Monster.save(Monster.java:114)
-	at app//MonsterTest.save_recordsTimeOfCreationInDatabase(MonsterTest.java:184)
-	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
-	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at app//org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at app//DatabaseRule.after(DatabaseRule.java:17)
+	at app//org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:50)
 	at app//org.junit.rules.RunRules.evaluate(RunRules.java:20)
 	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
@@ -119,8 +112,8 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.postgresql.util.PSQLException: ERROR: column &quot;birthday&quot; of relation &quot;monsters&quot; does not exist
-  Position: 39
+Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;persons&quot; does not exist
+  Position: 13
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
@@ -129,7 +122,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column &quot;birthday&quot;
 	at app//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
 	at app//org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
 	at app//org.sql2o.Query.executeUpdate(Query.java:653)
-	... 40 more
+	... 33 more
 </pre>
 </span>
 </div>
@@ -146,7 +139,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column &quot;birthday&quot;
 </thead>
 <tr>
 <td class="failures">save_recordsTimeOfCreationInDatabase</td>
-<td class="failures">0.160s</td>
+<td class="failures">0.161s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -160,7 +153,7 @@ org.postgresql.util.PSQLException: Cannot rollback when autoCommit is enabled.
 	at org.sql2o.Connection.rollback(Connection.java:132)
 	at org.sql2o.Connection.onException(Connection.java:76)
 	at org.sql2o.Query.executeUpdate(Query.java:658)
-	at org.example.Monster.save(Monster.java:114)
+	at org.example.Monster.save(Monster.java:125)
 	at MonsterTest.save_recordsTimeOfCreationInDatabase(MonsterTest.java:184)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -169,6 +162,45 @@ org.postgresql.util.PSQLException: Cannot rollback when autoCommit is enabled.
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[Test worker] WARN org.sql2o.Connection - Could not roll back transaction. message: {}
+org.postgresql.util.PSQLException: Cannot rollback when autoCommit is enabled.
+	at org.postgresql.jdbc.PgConnection.rollback(PgConnection.java:777)
+	at org.sql2o.Connection.rollback(Connection.java:132)
+	at org.sql2o.Connection.onException(Connection.java:76)
+	at org.sql2o.Query.executeUpdate(Query.java:658)
+	at DatabaseRule.after(DatabaseRule.java:17)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:50)
 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
@@ -211,7 +243,7 @@ org.postgresql.util.PSQLException: Cannot rollback when autoCommit is enabled.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at Jan 9, 2023, 10:29:41 AM</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at Jan 9, 2023, 1:06:40 PM</p>
 </div>
 </div>
 </body>
