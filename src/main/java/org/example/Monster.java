@@ -54,57 +54,57 @@ public class Monster {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public int getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
-        this.personId = personId;
-    }
+//    public void setPersonId(int personId) {
+//        this.personId = personId;
+//    }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public int getPlayLevel() {
         return playLevel;
     }
 
-    public void setPlayLevel(int playLevel) {
-        this.playLevel = playLevel;
-    }
+//    public void setPlayLevel(int playLevel) {
+//        this.playLevel = playLevel;
+//    }
 
     public int getSleepLevel() {
         return sleepLevel;
     }
 
-    public void setSleepLevel(int sleepLevel) {
-        this.sleepLevel = sleepLevel;
-    }
+//    public void setSleepLevel(int sleepLevel) {
+//        this.sleepLevel = sleepLevel;
+//    }
 
     public int getFoodLevel() {
         return foodLevel;
     }
 
-    public void setFoodLevel(int foodLevel) {
-        this.foodLevel = foodLevel;
-    }
+//    public void setFoodLevel(int foodLevel) {
+//        this.foodLevel = foodLevel;
+//    }
 
     public Timestamp getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Timestamp birthday) {
-        this.birthday = birthday;
-    }
+//    public void setBirthday(Timestamp birthday) {
+//        this.birthday = birthday;
+//    }
 
     public void save() {
     try(Connection con = DB.sql2o.open()) {

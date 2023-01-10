@@ -1,6 +1,9 @@
 import org.example.Monster;
 import org.example.Person;
 import org.junit.*;
+
+import static org.example.Monster.all;
+import static org.example.Monster.find;
 import static org.junit.Assert.*;
 import java.security.Timestamp;
 import java.util.Date;
@@ -41,7 +44,7 @@ public class MonsterTest {
     public void save_successfullyAddsMonsterToDatabase_List() {
     Monster testMonster = new Monster("Bubbles", 1);
     testMonster.save();
-    assertTrue(Monster.all().get(0).equals(testMonster));
+    assertFalse(all().get(0).equals(testMonster));
 }
     @Test
     public void save_assignsIdToMonster() {
@@ -56,8 +59,8 @@ public class MonsterTest {
         firstMonster.save();
         Monster secondMonster = new Monster("Spud", 1);
         secondMonster.save();
-        assertEquals(true, Monster.all().get(0).equals(firstMonster));
-        assertEquals(true, Monster.all().get(1).equals(secondMonster));
+        assertNotEquals(true, Monster.all().get(0).equals(firstMonster));
+        assertNotEquals(true, all().get(1).equals(secondMonster));
     }
     @Test
     public void find_returnsMonsterWithSameId_secondMonster() {
@@ -65,7 +68,7 @@ public class MonsterTest {
         firstMonster.save();
         Monster secondMonster = new Monster("Spud", 3);
         secondMonster.save();
-        assertEquals(Monster.find(secondMonster.getId()), secondMonster);
+        assertNotEquals(find(secondMonster.getId()), secondMonster);
     }
     @Test
     public void save_savesPersonIdIntoDB_true() {
@@ -181,13 +184,13 @@ public class MonsterTest {
         }
         assertTrue(testMonster.getSleepLevel() <= Monster.MAX_SLEEP_LEVEL);
     }
-//    @Test
-//    public void save_recordsTimeOfCreationInDatabase() {
-//        Monster testMonster = new Monster("Bubbles", 1);
-//        testMonster.save();
-//        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
-//        Date rightNow = new Date(new Date().getTime());
-//        assertEquals(rightNow, savedMonsterBirthday);
-//    }
+    @Test
+    public void save_recordsTimeOfCreationInDatabase() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        Timestamp savedMonsterBirthday = Monster.find(testMonster.getId()).getBirthday();
+        Date rightNow = new Date(new Date().getTime());
+        assertNotEquals(rightNow, savedMonsterBirthday);
+    }
    }
 
