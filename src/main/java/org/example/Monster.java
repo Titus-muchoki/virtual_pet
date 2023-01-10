@@ -3,7 +3,6 @@ package org.example;
 import org.sql2o.Connection;
 
 import java.security.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,8 +32,8 @@ public class Monster {
     this.name = name;
     this.personId = personId;
     this.playLevel = MAX_PLAY_LEVEL / 2;
-        sleepLevel = MAX_SLEEP_LEVEL / 2;
-        foodLevel = MAX_FOOD_LEVEL / 2;
+    this.sleepLevel = MAX_SLEEP_LEVEL / 2;
+    this.foodLevel = MAX_FOOD_LEVEL / 2;
 
     }
 
@@ -43,12 +42,12 @@ public class Monster {
         if (this == o) return true;
         if (!(o instanceof Monster)) return false;
         Monster monster = (Monster) o;
-        return personId == monster.personId && id == monster.id && Objects.equals(name, monster.name);
+        return personId == monster.personId && id == monster.id && foodLevel == monster.foodLevel && sleepLevel == monster.sleepLevel && playLevel == monster.playLevel && Objects.equals(name, monster.name) && Objects.equals(birthday, monster.birthday) && Objects.equals(lastSlept, monster.lastSlept) && Objects.equals(lastAte, monster.lastAte) && Objects.equals(lastPlayed, monster.lastPlayed);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, personId, id);
+        return Objects.hash(name, personId, id, foodLevel, sleepLevel, playLevel, birthday, lastSlept, lastAte, lastPlayed);
     }
 
     public String getName() {
@@ -165,4 +164,5 @@ public void play(){
         foodLevel++;
     }
 }
+
 
