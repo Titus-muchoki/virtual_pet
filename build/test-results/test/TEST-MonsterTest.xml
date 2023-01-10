@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MonsterTest" tests="28" skipped="0" failures="0" errors="0" timestamp="2023-01-10T17:18:46" hostname="kajela-HP-EliteBook-840-G3" time="1.048">
+<testsuite name="MonsterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-10T18:13:30" hostname="kajela-HP-EliteBook-840-G3" time="6.236">
   <properties/>
-  <testcase name="sleep_increasesMonsterSleepLevel" classname="MonsterTest" time="0.153"/>
-  <testcase name="feed_throwsExceptionIfFoodLevelIsAtMaxValue" classname="MonsterTest" time="0.029"/>
-  <testcase name="save_savesPersonIdIntoDB_true" classname="MonsterTest" time="0.088"/>
-  <testcase name="save_recordsTimeOfCreationInDatabase" classname="MonsterTest" time="0.033"/>
-  <testcase name="play_recordsTimeLastPlayedInDatabase" classname="MonsterTest" time="0.043"/>
-  <testcase name="monster_instantiatesWithHalfFullPlayLevel" classname="MonsterTest" time="0.026"/>
-  <testcase name="all_returnsAllInstancesOfMonster_true" classname="MonsterTest" time="0.088"/>
-  <testcase name="sleep_throwsExceptionIfSleepLevelIsAtMaxValue" classname="MonsterTest" time="0.036"/>
-  <testcase name="monster_playLevelCannotGoBeyondMaxValue" classname="MonsterTest" time="0.05"/>
-  <testcase name="save_assignsIdToMonster" classname="MonsterTest" time="0.029"/>
-  <testcase name="play_increasesMonsterPlayLevel" classname="MonsterTest" time="0.016"/>
-  <testcase name="monster_instantiatesWithHalfFullSleepLevel" classname="MonsterTest" time="0.008"/>
-  <testcase name="isAlive_confirmsMonsterIsAliveIfAllLevelsAboveMinimum_true" classname="MonsterTest" time="0.008"/>
-  <testcase name="monster_instantiatesWithHalfFullFoodLevel" classname="MonsterTest" time="0.008"/>
-  <testcase name="Monster_instantiatesWithPersonId_int" classname="MonsterTest" time="0.008"/>
-  <testcase name="feed_increasesMonsterFoodLevel" classname="MonsterTest" time="0.018"/>
-  <testcase name="save_successfullyAddsMonsterToDatabase_List" classname="MonsterTest" time="0.028"/>
-  <testcase name="equals_returnsTrueIfNameAndPersonIdAreSame_true" classname="MonsterTest" time="0.007"/>
-  <testcase name="monster_sleepLevelCannotGoBeyondMaxValue" classname="MonsterTest" time="0.042"/>
-  <testcase name="feed_recordsTimeLastAteInDatabase" classname="MonsterTest" time="0.045"/>
-  <testcase name="isAlive_recognizesMonsterIsDeadWhenLevelsReachMinimum_false" classname="MonsterTest" time="0.022"/>
-  <testcase name="monster_instantiatesCorrectly_true" classname="MonsterTest" time="0.018"/>
-  <testcase name="find_returnsMonsterWithSameId_secondMonster" classname="MonsterTest" time="0.052"/>
-  <testcase name="play_throwsExceptionIfPlayLevelIsAtMaxValue" classname="MonsterTest" time="0.06"/>
-  <testcase name="depleteLevels_reducesAllLevels" classname="MonsterTest" time="0.007"/>
-  <testcase name="sleep_recordsTimeLastSleptInDatabase" classname="MonsterTest" time="0.039"/>
-  <testcase name="monster_foodLevelCannotGoBeyondMaxValue" classname="MonsterTest" time="0.047"/>
-  <testcase name="Monster_instantiatesWithName_String" classname="MonsterTest" time="0.009"/>
+  <testcase name="timer_haltsAfterMonsterDies" classname="MonsterTest" time="6.236"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
