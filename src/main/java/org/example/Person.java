@@ -31,25 +31,25 @@ public class Person {
         return name;
     }
 
-//    public void setName(String name) {
-//        this.name = name;
-//    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getEmail() {
         return email;
     }
 
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public int getId() {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {

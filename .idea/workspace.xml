@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/MonsterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/MonsterTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/MonsterTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/MonsterTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -24,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MonsterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PersonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +84,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MonsterTest.save_successfullyAddsMonsterToDatabase_List">
+  <component name="RunManager" selected="Gradle.MonsterTest">
     <configuration name="MonsterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -97,6 +99,52 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;MonsterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MonsterTest.feed_recordsTimeLastAteInDatabase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MonsterTest.feed_recordsTimeLastAteInDatabase&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MonsterTest.play_recordsTimeLastPlayedInDatabase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MonsterTest.play_recordsTimeLastPlayedInDatabase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +177,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MonsterTest.save_returnsTrueIfDescriptionsAretheSame" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MonsterTest.sleep_recordsTimeLastSleptInDatabase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,53 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MonsterTest.save_returnsTrueIfDescriptionsAretheSame&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MonsterTest.save_successfullyAddsMonsterToDatabase_List" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;MonsterTest.save_successfullyAddsMonsterToDatabase_List&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PersonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;PersonTest&quot;" />
+            <option value="&quot;MonsterTest.sleep_recordsTimeLastSleptInDatabase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -200,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MonsterTest.save_successfullyAddsMonsterToDatabase_List" />
         <item itemvalue="Gradle.MonsterTest" />
-        <item itemvalue="Gradle.PersonTest" />
+        <item itemvalue="Gradle.MonsterTest.play_recordsTimeLastPlayedInDatabase" />
+        <item itemvalue="Gradle.MonsterTest.feed_recordsTimeLastAteInDatabase" />
+        <item itemvalue="Gradle.MonsterTest.sleep_recordsTimeLastSleptInDatabase" />
         <item itemvalue="Gradle.MonsterTest.save_recordsTimeOfCreationInDatabase" />
-        <item itemvalue="Gradle.MonsterTest.save_returnsTrueIfDescriptionsAretheSame" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +255,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/MonsterTest.java</url>
-          <line>150</line>
+          <line>149</line>
           <properties class="MonsterTest" method="play_throwsExceptionIfPlayLevelIsAtMaxValue">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -262,7 +264,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/MonsterTest.java</url>
-          <line>167</line>
+          <line>166</line>
           <properties class="MonsterTest" method="sleep_throwsExceptionIfSleepLevelIsAtMaxValue">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -271,17 +273,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Monster.java</url>
-          <line>137</line>
+          <line>121</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Monster.java</url>
-          <line>121</line>
+          <line>105</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/MonsterTest.java</url>
-          <line>7</line>
+          <line>11</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>

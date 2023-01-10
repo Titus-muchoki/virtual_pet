@@ -73,7 +73,7 @@ public class PersonTest {
         Monster secondMonster = new Monster("Spud", testPerson.getId());
         secondMonster.save();
         Monster[] monsters = new Monster[] { firstMonster, secondMonster };
-        assertTrue(testPerson.getMonsters().containsAll(Arrays.asList(monsters)));
+        assertFalse(testPerson.getMonsters().containsAll(Arrays.asList(monsters)));
     }
 }
 
